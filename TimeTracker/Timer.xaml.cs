@@ -36,18 +36,18 @@ namespace TimeTracker
             Debug.WriteLine("In Tapped Event");
             myStoryboard = (Storyboard)this.Resources["GoButton"];
             myStoryboard.Begin();
-            ellipse.IsTapEnabled = false;
-            textBlock.IsTapEnabled = false;
+            GoEllipse.IsTapEnabled = false;
+            
         }
 
-        private void textBlock_Tapped(object sender, TappedRoutedEventArgs e)
+        private void PauseEllipse_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            Storyboard myStoryboard;
-            Debug.WriteLine("In Text Block Tapped Event");
-            myStoryboard = (Storyboard)this.Resources["GoButton"];
-            myStoryboard.Begin();
-            textBlock.IsTapEnabled = false;
-            ellipse.IsTapEnabled = false;
+
+        }
+
+        private void StopEllipse_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+
         }
     }
 }

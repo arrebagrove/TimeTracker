@@ -78,7 +78,7 @@
                        TextAlignment="Center" TextWrapping="WrapWholeWords"
                        Foreground="White" FontSize="15"
                        Text="Average Time " d:IsLocked="True"></TextBlock>
-            <TextBlock Grid.Row="3" Grid.Column="4"
+            <TextBlock Grid.Row="3" Grid.Column="3"
                        Grid.ColumnSpan="3"
                        HorizontalAlignment="Center" Margin="5"
                        TextAlignment="Center" TextWrapping="WrapWholeWords"
@@ -99,7 +99,7 @@
                        TextWrapping="WrapWholeWords"
                        Foreground="White" FontSize="15"
                        Text="90th percentile" d:IsLocked="True"></TextBlock>
-            <TextBlock Grid.Row="4" Grid.Column="4"
+            <TextBlock Grid.Row="4" Grid.Column="3"
                        Grid.ColumnSpan="3"
                        HorizontalAlignment="Center" 
                        Margin="5"
@@ -117,20 +117,42 @@
                        FontSize="60"
                        Grid.ColumnSpan="6" Grid.Row="5" RenderTransformOrigin="0.5,0.5">
                 </TextBlock>
-            <Grid Grid.Row="6" Grid.ColumnSpan="6">
-                <Ellipse x:Name="ellipse" 
+            <Grid Grid.Row="6" Grid.ColumnSpan="6" x:Name="GoButtonGrid">
+                <Ellipse x:Name="GoEllipse" 
                          Stroke="White"
+                         StrokeThickness="2"
                          Tapped="ellipse_Tapped"
                          Height="150" Fill="#6Ed19D" Width="150">
                 </Ellipse>
-                <TextBlock x:Name="textBlock" 
+                <TextBlock x:Name="GoTextBlock" 
                            HorizontalAlignment="Center"
                            Margin="0,0,0,5"
-                           Tapped="textBlock_Tapped"
                            VerticalAlignment="Center"
-                           FontSize="60"
+                           FontSize="50"
                            Foreground="White" Text="GO">
                 </TextBlock>
+            </Grid>
+            <Grid Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3">
+                <Ellipse x:Name="PauseEllipse" Stroke="White"
+                         StrokeThickness="2"
+                         Tapped="PauseEllipse_Tapped"
+                         Height="120" Width="120"></Ellipse>
+                <TextBlock x:Name="PauseTextBlock" Foreground="White"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontSize="30"
+                           Text="PAUSE"></TextBlock>
+            </Grid>
+            <Grid Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="3">
+                <Ellipse x:Name="StopEllipse" Stroke="White"
+                         StrokeThickness="2"
+                         Tapped="StopEllipse_Tapped"
+                         Height="120" Width="120"></Ellipse>
+                <TextBlock x:Name="StopTextBlock" Foreground="White"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontSize="30"
+                           Text="STOP"></TextBlock>
             </Grid>
         </Grid>
 
