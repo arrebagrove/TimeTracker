@@ -6,140 +6,15 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <Page.Resources>
-        <Storyboard x:Name="GoButton">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="ellipse">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.431"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.431"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.646"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.646"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.667">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <CubicEase EasingMode="EaseInOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="ellipse">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-46.428"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-85.61"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-119.373"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-141.978"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-173.137">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <CubicEase EasingMode="EaseInOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimation Duration="0:0:0.5" To="-33.333" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
-            <DoubleAnimation Duration="0:0:0.5" To="2.667" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock">
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="textBlock">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.5"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="textBlock">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.5"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimation Duration="0:0:0.5" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
-            <DoubleAnimation Duration="0:0:0.5" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock1">
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="ellipse">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.9"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.4"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.7"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1.2"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.4"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="ellipse">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.9"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.4"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.7"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1.2"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.4"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsDoubleTapEnabled)" Storyboard.TargetName="ellipse">
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
-                    <DiscreteObjectKeyFrame.Value>
-                        <x:Boolean>True</x:Boolean>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
-                    <DiscreteObjectKeyFrame.Value>
-                        <x:Boolean>False</x:Boolean>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsHoldingEnabled)" Storyboard.TargetName="ellipse">
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
-                    <DiscreteObjectKeyFrame.Value>
-                        <x:Boolean>True</x:Boolean>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
-                    <DiscreteObjectKeyFrame.Value>
-                        <x:Boolean>False</x:Boolean>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsRightTapEnabled)" Storyboard.TargetName="ellipse">
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
-                    <DiscreteObjectKeyFrame.Value>
-                        <x:Boolean>True</x:Boolean>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
-                    <DiscreteObjectKeyFrame.Value>
-                        <x:Boolean>False</x:Boolean>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-        </Storyboard>
-    </Page.Resources>
+   
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
-
-            <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
         <Image x:Name="image" Source="images/background.png" 
                Stretch="Fill" Grid.RowSpan="2" Grid.Row="0" 
                Grid.Column="0" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
-                <CompositeTransform/>
-            </Image.RenderTransform>
-            <Image.Projection>
-                <PlaneProjection/>
-            </Image.Projection>
         </Image>
         <Grid Grid.Row="0" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
@@ -191,25 +66,31 @@
                    Margin="5,5,0,15"
                    FontSize="15"
                    HorizontalAlignment="Center" d:IsLocked="True"></TextBlock>
-            <Border BorderBrush="#625F80" BorderThickness="0,0,0,1"
-                Grid.Row="2" VerticalAlignment="Bottom"
+            <Border BorderBrush="#625F80" 
+                    BorderThickness="0,0,0,1"
+                    Grid.Row="2" VerticalAlignment="Bottom"
                     Grid.Column="0"
-                Grid.ColumnSpan="6" d:IsLocked="True"></Border>
+                    Grid.ColumnSpan="6" d:IsLocked="True"></Border>
             <TextBlock Grid.Row="3" Grid.Column="0"
                        Grid.ColumnSpan="3"
-                   HorizontalAlignment="Center"
-                   Margin="5"
-                   TextAlignment="Center" TextWrapping="WrapWholeWords"
-                   Foreground="White" FontSize="15"
-                   Text="Average Time " d:IsLocked="True"></TextBlock>
+                       HorizontalAlignment="Center"
+                       Margin="5"
+                       TextAlignment="Center" TextWrapping="WrapWholeWords"
+                       Foreground="White" FontSize="15"
+                       Text="Average Time " d:IsLocked="True"></TextBlock>
             <TextBlock Grid.Row="3" Grid.Column="4"
                        Grid.ColumnSpan="3"
                        HorizontalAlignment="Center" Margin="5"
                        TextAlignment="Center" TextWrapping="WrapWholeWords"
                        Foreground="White" FontSize="15"
                        Text="03:23:22" d:IsLocked="True"></TextBlock>
-            <Border Grid.Row="3" Grid.ColumnSpan="6" VerticalAlignment="Bottom" BorderBrush="#625F80"
-                    BorderThickness="0,0,0,1" Margin="30,0,30,0" d:IsLocked="True"></Border>
+            <Border Grid.Row="3" 
+                    Grid.ColumnSpan="6" 
+                    VerticalAlignment="Bottom" 
+                    BorderBrush="#625F80"
+                    BorderThickness="0,0,0,1" 
+                    Margin="30,0,30,0" 
+                    d:IsLocked="True"></Border>
             <TextBlock Grid.Row="4" Grid.Column="0"
                        Grid.ColumnSpan="3"
                        HorizontalAlignment="Center"
@@ -228,53 +109,30 @@
             <Border Grid.Row="4" Grid.ColumnSpan="6" VerticalAlignment="Bottom" BorderBrush="#625F80"
                 BorderThickness="0,0,0,1" Margin="30,0,30,0" d:IsLocked="True"></Border>
 
-            <TextBlock x:Name="textBlock1" Text="12:34:00" 
+            <TextBlock x:Name="PausedTime" Text="12:34:00" 
                        Foreground="White"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
                        Margin="0,60,0,40"
                        FontSize="60"
                        Grid.ColumnSpan="6" Grid.Row="5" RenderTransformOrigin="0.5,0.5">
-                <TextBlock.RenderTransform>
-                    <CompositeTransform/>
-                </TextBlock.RenderTransform></TextBlock>
-            <Ellipse x:Name="ellipse" Grid.Row="6" 
-                     Grid.ColumnSpan="6"
-                     Stroke="White"
-                     HorizontalAlignment="Center" VerticalAlignment="Center"
-                     Tapped="ellipse_Tapped"
-                     Height="150" Fill="#6Ed19D" Width="150" RenderTransformOrigin="0.5,0.5">
-                <Ellipse.RenderTransform>
-                    <CompositeTransform/>
-                </Ellipse.RenderTransform>
-
-            </Ellipse>
-            <TextBlock x:Name="textBlock" Grid.Row="6" Grid.ColumnSpan="6"
-                       HorizontalAlignment="Center"
+                </TextBlock>
+            <Grid Grid.Row="6" Grid.ColumnSpan="6">
+                <Ellipse x:Name="ellipse" 
+                         Stroke="White"
+                         Tapped="ellipse_Tapped"
+                         Height="150" Fill="#6Ed19D" Width="150">
+                </Ellipse>
+                <TextBlock x:Name="textBlock" 
+                           HorizontalAlignment="Center"
                            Margin="0,0,0,5"
-                       Tapped="textBlock_Tapped"
-                       VerticalAlignment="Center"
-                       FontSize="60"
-                       Foreground="White" Text="GO" RenderTransformOrigin="0.5,0.5">
-                <TextBlock.RenderTransform>
-                    <CompositeTransform/>
-                </TextBlock.RenderTransform></TextBlock>
-            <!--<Ellipse x:Name="stop" Grid.Row="6" Grid.Column="0"
-                     HorizontalAlignment="Left" 
-                     Visibility="Collapsed"
-                     VerticalAlignment="Bottom"
-                     Stroke="White" Width="15" Height="15"></Ellipse>
-
-            <Ellipse x:Name="pause" Grid.Row="6" Grid.Column="1"
-                     HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                     Stroke="White" Width="15" Height="15"></Ellipse> -->
+                           Tapped="textBlock_Tapped"
+                           VerticalAlignment="Center"
+                           FontSize="60"
+                           Foreground="White" Text="GO">
+                </TextBlock>
+            </Grid>
         </Grid>
-        <Ellipse x:Name="StopEllipse"
-                  Grid.Column="0"
-                  Grid.Row="1"
-                  Height="40"
-                  Width="28"
-                  Stroke="1"></Ellipse>
 
     </Grid>
 </Page>
