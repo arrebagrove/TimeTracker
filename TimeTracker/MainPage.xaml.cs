@@ -25,7 +25,12 @@ namespace TimeTracker
         public MainPage()
         {
             this.InitializeComponent();
-            RootPage.Navigate(typeof(Timer));
+            /*Loaded += (s, e) =>
+            {
+                Frame rootFrame = Window.Current.Content as Frame;
+                rootFrame.Navigate(typeof(Timer));
+            };*/
+            //RootPage.Navigate(typeof(Timer));
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -33,7 +38,7 @@ namespace TimeTracker
            // rootFrame.Navigate(typeof(Timer));
 
         }
-
+         
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
