@@ -34,7 +34,7 @@ namespace TimeTracker
         {
             Storyboard myStoryboard;
             Debug.WriteLine("In Tapped Event");
-            myStoryboard = (Storyboard)this.Resources["GoButton"];
+            myStoryboard = (Storyboard)this.Resources["GoButtonTapped"];
             myStoryboard.Begin();
             GoEllipse.IsTapEnabled = false;
             

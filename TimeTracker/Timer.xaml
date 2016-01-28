@@ -7,7 +7,146 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Page.Resources>
-        <Storyboard x:Name="GoButtonTapped"/>
+        <Storyboard x:Name="GoButtonTapped">
+            <DoubleAnimation Duration="0:0:0.1" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="GoButtonGrid" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="GoButtonGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="20">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-30"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-60"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-90"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-120"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-150"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="GoTextBlock">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.2"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="GoTextBlock">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.2"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="GoEllipse">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1.4"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="GoEllipse">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1.4"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="PausedTime">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="PausedTime">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="GoTextBlock">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PausedTime">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="PauseGrid">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="StopGrid">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="StopGrid">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="StopGrid">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="PauseGrid">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="PauseGrid">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="TimerText">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="PauseGrid">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="20"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="StopGrid">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="20"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </Page.Resources>
 
 
@@ -120,20 +259,32 @@
                        Margin="0,60,0,40"
                        FontSize="60"
                        Grid.ColumnSpan="6" Grid.Row="5" RenderTransformOrigin="0.5,0.5">
-                </TextBlock>
-            <Grid Grid.Row="6" Grid.ColumnSpan="6" x:Name="GoButtonGrid">
+                <TextBlock.RenderTransform>
+                    <CompositeTransform/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <Grid Grid.Row="6" Grid.ColumnSpan="6" x:Name="GoButtonGrid" RenderTransformOrigin="0.5,0.5">
+                <Grid.RenderTransform>
+                    <CompositeTransform/>
+                </Grid.RenderTransform>
                 <Ellipse x:Name="GoEllipse" 
                          Stroke="White"
                          StrokeThickness="2"
                          Tapped="ellipse_Tapped"
-                         Height="150" Fill="#6Ed19D" Width="150">
+                         Height="150" Fill="#6Ed19D" Width="150" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <CompositeTransform/>
+                    </Ellipse.RenderTransform>
                 </Ellipse>
                 <TextBlock x:Name="GoTextBlock" 
                            HorizontalAlignment="Center"
                            Margin="0,0,0,5"
                            VerticalAlignment="Center"
                            FontSize="50"
-                           Foreground="White" Text="GO">
+                           Foreground="White" Text="GO" RenderTransformOrigin="0.5,0.5">
+                    <TextBlock.RenderTransform>
+                        <CompositeTransform/>
+                    </TextBlock.RenderTransform>
                 </TextBlock>
                 <TextBlock x:Name="TimerText" Visibility="Collapsed"
                            HorizontalAlignment="Center"
@@ -143,7 +294,10 @@
                            FontSize="50"
                            Foreground="White" Text="12:34:00"></TextBlock>
             </Grid>
-            <Grid Grid.Row="6" x:Name="PauseGrid" Grid.Column="0" Grid.ColumnSpan="3" Visibility="Collapsed">
+            <Grid Grid.Row="6" x:Name="PauseGrid" Grid.Column="0" Grid.ColumnSpan="3" Visibility="Collapsed" RenderTransformOrigin="0.5,0.5">
+                <Grid.RenderTransform>
+                    <CompositeTransform/>
+                </Grid.RenderTransform>
                 <Ellipse x:Name="PauseEllipse" Stroke="White"
                          StrokeThickness="2"
                          Tapped="PauseEllipse_Tapped"
@@ -154,7 +308,10 @@
                            FontSize="30"
                            Text="PAUSE"></TextBlock>
             </Grid>
-            <Grid Grid.Row="6" x:Name="StopGrid" Grid.Column="3" Grid.ColumnSpan="3" Visibility="Collapsed">
+            <Grid Grid.Row="6" x:Name="StopGrid" Grid.Column="3" Grid.ColumnSpan="3" Visibility="Collapsed" RenderTransformOrigin="0.5,0.5">
+                <Grid.RenderTransform>
+                    <CompositeTransform/>
+                </Grid.RenderTransform>
                 <Ellipse x:Name="StopEllipse" Stroke="White"
                          StrokeThickness="2"
                          Tapped="StopEllipse_Tapped"
