@@ -6,7 +6,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-   
+    <Page.Resources>
+        <Storyboard x:Name="GoButtonTapped"/>
+    </Page.Resources>
+
 
     <Grid>
         <Grid.RowDefinitions>
@@ -111,6 +114,7 @@
 
             <TextBlock x:Name="PausedTime" Text="12:34:00" 
                        Foreground="White"
+                       CharacterSpacing="15"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
                        Margin="0,60,0,40"
@@ -131,8 +135,15 @@
                            FontSize="50"
                            Foreground="White" Text="GO">
                 </TextBlock>
+                <TextBlock x:Name="TimerText" Visibility="Collapsed"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontFamily="Segoe UI Light"
+                           CharacterSpacing="15"
+                           FontSize="50"
+                           Foreground="White" Text="12:34:00"></TextBlock>
             </Grid>
-            <Grid Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid Grid.Row="6" x:Name="PauseGrid" Grid.Column="0" Grid.ColumnSpan="3" Visibility="Collapsed">
                 <Ellipse x:Name="PauseEllipse" Stroke="White"
                          StrokeThickness="2"
                          Tapped="PauseEllipse_Tapped"
@@ -143,7 +154,7 @@
                            FontSize="30"
                            Text="PAUSE"></TextBlock>
             </Grid>
-            <Grid Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="3">
+            <Grid Grid.Row="6" x:Name="StopGrid" Grid.Column="3" Grid.ColumnSpan="3" Visibility="Collapsed">
                 <Ellipse x:Name="StopEllipse" Stroke="White"
                          StrokeThickness="2"
                          Tapped="StopEllipse_Tapped"
