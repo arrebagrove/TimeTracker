@@ -44,5 +44,10 @@ namespace TimeTracker
             Frame rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(Timer));
         }
+
+        private void AddActivity_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
