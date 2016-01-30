@@ -113,6 +113,7 @@
     <None Include="TimeTracker_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\add.png" />
     <Content Include="Images\background.png" />
     <Content Include="Images\background600.png" />
     <Content Include="Properties\Default.rd.xml" />

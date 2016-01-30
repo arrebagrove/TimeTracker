@@ -16,12 +16,35 @@
             <Setter Property="Margin" Value="0,0,5,2"></Setter>
             <Setter Property="TextWrapping" Value="Wrap"></Setter>
         </Style>
+        <Storyboard x:Name="AddButtonImageTapped">
+            <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="AddButtonImage" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0" To="0.5" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="AddButtonImage" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="AddButtonImage">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="AddNewStackPanel">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-       
+
         <Image Source="images/background600.png" Grid.Row="0" Stretch="Fill"></Image>
         <Grid Grid.Row="0">
             <Grid.RowDefinitions>
@@ -31,13 +54,13 @@
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="3.5*"></ColumnDefinition>
-                <ColumnDefinition Width="3.5*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            
-            <Grid x:Name="rectangleGrid" Grid.Row="1" Grid.Column="1"
-                  Grid.ColumnSpan="2" Margin="10">
+
+            <Grid x:Name="rectangleGrid" Grid.Column="1"
+                  Grid.ColumnSpan="2" Grid.Row="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
@@ -47,16 +70,22 @@
                            RadiusY="30"></Rectangle>
                 <Rectangle Stroke="White" Grid.Row="1" 
                            RadiusX="30" RadiusY="30"></Rectangle>
-                <Grid Grid.Row="0">
-                    <Ellipse Stroke="White"
-                         HorizontalAlignment="Center" VerticalAlignment="Center"
-                         Height="100" Width="100"></Ellipse>
-                    <Button x:Name="AddActivity" Click="AddActivity_Click"
-                            HorizontalAlignment="Center" VerticalAlignment="Center" 
-                            Foreground="White" FontSize="40"
-                            FontFamily="Segoe MDL2 Assets" Content="&#xE109;"></Button>
-                </Grid>
-                
+                <Image Source="Images/add.png" Grid.Row="0" 
+                       Height="100" Width="100"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                       x:Name="AddButtonImage" Tapped="AddButton_Tapped"
+                       Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <CompositeTransform/>
+                    </Image.RenderTransform>
+                </Image>
+                <StackPanel Orientation="Horizontal" Visibility="Collapsed" HorizontalAlignment="Center"
+                            VerticalAlignment="Center" x:Name="AddNewStackPanel">
+                    <TextBox Width="200" AcceptsReturn="True"
+                         VerticalAlignment="Center"
+                         Height="30"></TextBox>
+                    <Button x:Name="GoButtonMain" Click="GoButtonMain_Click"  Background="#35E7BD" Width="50" Height="30" Content="GO" Foreground="White"></Button>
+                </StackPanel>
             </Grid>
 
             <Grid x:Name="GraphGrid" Grid.Row="2" 
@@ -84,7 +113,7 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
-                    
+
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"></RowDefinition>
@@ -130,19 +159,19 @@
                 <Rectangle x:Name="Day7" Grid.Row="2" RadiusX="15" RadiusY="15" Grid.Column="19" Grid.ColumnSpan="1" Grid.RowSpan="12" Fill="#35e7bd"></Rectangle>
 
                 <TextBlock Style="{StaticResource gridYAxisStyle}"
-                           Text="00:00"  Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="2"></TextBlock>
+                           Text="00:00:00"  Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="2"></TextBlock>
                 <TextBlock Style="{StaticResource gridYAxisStyle}"
-                           Text="00:15"  Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="2"></TextBlock>
+                           Text="00:00:15"  Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="2"></TextBlock>
                 <TextBlock Style="{StaticResource gridYAxisStyle}"
-                           Text="00:30"  Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="2"></TextBlock>
+                           Text="00:00:30"  Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="2"></TextBlock>
                 <TextBlock Style="{StaticResource gridYAxisStyle}"
-                           Text="00:45"  Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="2"></TextBlock>
+                           Text="00:00:45"  Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="2"></TextBlock>
                 <TextBlock Style="{StaticResource gridYAxisStyle}"
-                           Text="01:00"  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="2"></TextBlock>
+                           Text="00:01:00"  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="2"></TextBlock>
                 <TextBlock Style="{StaticResource gridYAxisStyle}"
-                           Text="01:30"  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="2"></TextBlock>
+                           Text="00:01:30"  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="2"></TextBlock>
                 <TextBlock Style="{StaticResource gridYAxisStyle}"
-                           Text="45:43"  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="2"></TextBlock>
+                           Text="00:45:43"  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="2"></TextBlock>
                 <TextBlock Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"
                            Foreground="#35e7bd" FontSize="10"
                            Grid.Column="10" Grid.ColumnSpan="10" Text="Past 7 records"></TextBlock>
