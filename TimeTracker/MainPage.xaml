@@ -6,7 +6,17 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    <Page.Resources>
+        <Style x:Key="gridYAxisStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#7D8EB1"></Setter>
+            <Setter Property="FontSize" Value="10"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Right"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="FontWeight" Value="SemiBold"></Setter>
+            <Setter Property="Margin" Value="0,0,5,2"></Setter>
+            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+        </Style>
+    </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
@@ -21,8 +31,8 @@
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="3*"></ColumnDefinition>
-                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="3.5*"></ColumnDefinition>
+                <ColumnDefinition Width="3.5*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             
@@ -40,7 +50,7 @@
             </Grid>
 
             <Grid x:Name="GraphGrid" Grid.Row="2" 
-                  Grid.Column="1" Margin="30"
+                  Grid.Column="1" Margin="0,30,0,30"
                   Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"></ColumnDefinition>
@@ -55,9 +65,82 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Border Grid.ColumnSpan="12" BorderBrush="White" BorderThickness="2,0,0,2"></Border>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Border Grid.Column="4" Grid.ColumnSpan="20" Grid.Row="13" BorderBrush="#7D8EB1" BorderThickness="0,0,0,1" VerticalAlignment="Bottom"></Border>
+                <Border Grid.Column="4" Grid.ColumnSpan="20" Grid.Row="12" BorderBrush="#405887" BorderThickness="0,0,0,1" VerticalAlignment="Bottom"></Border>
+                <Border Grid.Column="4" Grid.ColumnSpan="20" Grid.Row="11" BorderBrush="#405887" BorderThickness="0,0,0,1" VerticalAlignment="Bottom"></Border>
+                <Border Grid.Column="4" Grid.ColumnSpan="20" Grid.Row="10" BorderBrush="#405887" BorderThickness="0,0,0,1" VerticalAlignment="Bottom"></Border>
+                <Border Grid.Column="4" Grid.ColumnSpan="20" Grid.Row="9" BorderBrush="#405887" BorderThickness="0,0,0,1" VerticalAlignment="Bottom"></Border>
+                <Border Grid.Column="4" Grid.ColumnSpan="20" Grid.Row="8" BorderBrush="#405887" BorderThickness="0,0,0,1" VerticalAlignment="Bottom"></Border>
+                <Border Grid.Column="4" Grid.ColumnSpan="20" Grid.Row="7" BorderBrush="#405887" BorderThickness="0,0,0,1" VerticalAlignment="Bottom"></Border>
+                <Border Grid.Column="4" Grid.ColumnSpan="20" Grid.Row="6" BorderBrush="#405887" BorderThickness="0,0,0,1" VerticalAlignment="Bottom"></Border>
+                <Border Grid.Column="4" Grid.ColumnSpan="20" Grid.Row="5" BorderBrush="#405887" BorderThickness="0,0,0,1" VerticalAlignment="Bottom"></Border>
+                <Border Grid.Column="4" Grid.ColumnSpan="20" Grid.Row="4" BorderBrush="#405887" BorderThickness="0,0,0,1" VerticalAlignment="Bottom"></Border>
+                <Border Grid.Column="4" Grid.ColumnSpan="20" Grid.Row="3" BorderBrush="#405887" BorderThickness="0,0,0,1" VerticalAlignment="Bottom"></Border>
+                <Border Grid.Column="4" Grid.ColumnSpan="20" Grid.Row="2" BorderBrush="#405887" BorderThickness="0,0,0,1" VerticalAlignment="Bottom"></Border>
+                <Border Grid.Column="4" Grid.ColumnSpan="20" Grid.Row="1" BorderBrush="#405887"  BorderThickness="0,0,0,1" VerticalAlignment="Bottom"></Border>
+                <Border Grid.Column="4" Grid.ColumnSpan="20" Grid.Row="0"  BorderThickness="0,0,0,1" VerticalAlignment="Bottom"></Border>
+
+                <!--- use 35e7bd to color the rectangle-->
+
+                <Rectangle x:Name="Day1" Grid.Row="2" RadiusX="15" RadiusY="15" Grid.Column="5" Grid.ColumnSpan="2" Grid.RowSpan="12" Fill="#35e7bd"></Rectangle>
+                <Rectangle x:Name="Day2" Grid.Row="2" RadiusX="15" RadiusY="15" Grid.Column="8" Grid.ColumnSpan="2" Grid.RowSpan="12" Fill="#35e7bd"></Rectangle>
+                <Rectangle x:Name="Day3" Grid.Row="2" RadiusX="15" RadiusY="15" Grid.Column="11" Grid.ColumnSpan="2" Grid.RowSpan="12" Fill="#35e7bd"></Rectangle>
+                <Rectangle x:Name="Day4" Grid.Row="2" RadiusX="15" RadiusY="15" Grid.Column="14" Grid.ColumnSpan="2" Grid.RowSpan="12" Fill="#35e7bd"></Rectangle>
+                <Rectangle x:Name="Day5" Grid.Row="2" RadiusX="15" RadiusY="15" Grid.Column="17" Grid.ColumnSpan="2" Grid.RowSpan="12" Fill="#35e7bd"></Rectangle>
+                <Rectangle x:Name="Day6" Grid.Row="2" RadiusX="15" RadiusY="15" Grid.Column="20" Grid.ColumnSpan="2" Grid.RowSpan="12" Fill="#35e7bd"></Rectangle>
+                <Rectangle x:Name="Day7" Grid.Row="2" RadiusX="15" RadiusY="15" Grid.Column="23" Grid.ColumnSpan="2" Grid.RowSpan="12" Fill="#35e7bd"></Rectangle>
+
+                <TextBlock Style="{StaticResource gridYAxisStyle}"
+                           Text="0000"  Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="2"></TextBlock>
+                <TextBlock Style="{StaticResource gridYAxisStyle}"
+                           Text="0015"  Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="2"></TextBlock>
+                <TextBlock Style="{StaticResource gridYAxisStyle}"
+                           Text="0030"  Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="2"></TextBlock>
+                <TextBlock Style="{StaticResource gridYAxisStyle}"
+                           Text="0045"  Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="2"></TextBlock>
+                <TextBlock Style="{StaticResource gridYAxisStyle}"
+                           Text="0100"  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="2"></TextBlock>
+                <TextBlock Style="{StaticResource gridYAxisStyle}"
+                           Text="0130"  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="2"></TextBlock>
+                <TextBlock Style="{StaticResource gridYAxisStyle}"
+                           Text="4543"  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="2"></TextBlock>
+                <TextBlock Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           Foreground="#35e7bd" FontSize="10"
+                           Grid.Column="15" Grid.ColumnSpan="10" Text="Past 7 records"></TextBlock>
             </Grid>
+            
         </Grid>
         <Frame x:Name="RootPage" Grid.Row="0"></Frame>
     </Grid>

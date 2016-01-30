@@ -336,7 +336,7 @@
                          Stroke="White"
                          StrokeThickness="2"
                          Tapped="ellipse_Tapped"
-                         Height="150" Fill="#6Ed19D" Width="150" RenderTransformOrigin="0.5,0.5">
+                         Height="150" Fill="#35e7bd" Width="150" RenderTransformOrigin="0.5,0.5">
                     <Ellipse.RenderTransform>
                         <CompositeTransform/>
                     </Ellipse.RenderTransform>
